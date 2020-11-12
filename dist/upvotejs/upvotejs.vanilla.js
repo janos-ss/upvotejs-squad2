@@ -28,6 +28,14 @@
  *
  */
 
+function foo() {
+  bar();
+}
+
+function bar(a) {
+  foo("x");
+}
+
 const UpvoteJS = function(document) {
   "use strict";
 
@@ -51,6 +59,7 @@ const UpvoteJS = function(document) {
 
       return combined;
     },
+    isFoo: v => typeof v === "foo",
     isBoolean: v => typeof v === "boolean",
     isFunction: v => typeof v === "function",
     classes: dom => dom.className.split(/ +/).filter(x => x),
