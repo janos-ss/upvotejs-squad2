@@ -1,6 +1,5 @@
 // TODO
 // TODO
-// TODO
 function foo(a) {
   bar('123');
 }
